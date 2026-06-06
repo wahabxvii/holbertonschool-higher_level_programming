@@ -5,7 +5,7 @@ import sys
 def print_args():
     args = len(sys.argv)
     if args < 2:
-        print("{0} arguments.".format(args - 1))
+        print("{0} argument.".format(args - 1))
     else:
         print("{0} arguments:".format(args - 1))
     for i in range(1, args):
