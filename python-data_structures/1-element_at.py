@@ -6,4 +6,4 @@ def element_at(my_list, idx):
         return
     if idx > len(my_list):
         return
-    print("idx = {:d}".format(my_list[idx]))
+    print("Element at index {0:d} is {1:d}".format(idx, my_list[idx]))
