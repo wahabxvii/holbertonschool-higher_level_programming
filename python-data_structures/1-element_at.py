@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+my_list = [1, 2, 3, 4, 5]
+idx = 7
 
 
 def element_at(my_list, idx):
     if idx < 0:
-        print("Element at index {0:d} is None".format(idx))
+        return
     elif idx >= len(my_list):
-        print("Element at index {0:d} is None".format(idx))
-    else:
-        print("Element at index {0:d} is {1:d}".format(idx, my_list[idx]))
+        return
+    return my_list[idx]
