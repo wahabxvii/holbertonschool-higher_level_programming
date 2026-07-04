@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-import json
 """Module that has the from_json_string function"""
+
+
+import json
 
 
 def from_json_string(my_str):
