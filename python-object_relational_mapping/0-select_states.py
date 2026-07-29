@@ -1,26 +1,28 @@
 #!/usr/bin/python3
 '''A scirpt that lists id, name in states table.'''
-import sys
-
 import MySQLdb
 
+import sys
 
-db = MySQLdb.connect(
-    host="localhost",
-    port=3306,
-    user=sys.argv[1],
-    passwd=sys.argv[2],
-    name=sys.argv[3])
 
-cursor = db.cursor()
+if __name__ == "__main__":
 
-query = "SELECT id, name FROM states ORDER BY id ASC"
-cursor.execute(query)
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        name=sys.argv[3])
 
-rows = cursor.fetchall()
+    cursor = db.cursor()
 
-for row in rows:
-    print(row)
+    query = "SELECT id, name FROM states ORDER BY id ASC"
+    cursor.execute(query)
 
-cursor.close()
-db.close()
+    rows = cursor.fetchall()
+
+    for row in rows:
+        print(row)
+
+    cursor.close()
+    db.close()
