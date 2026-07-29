@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 '''A scirpt that lists id, name in states table.'''
+
+
 import MySQLdb
 import sys
 
@@ -11,7 +13,7 @@ if __name__ == "__main__":
         port=3306,
         user=sys.argv[1],
         passwd=sys.argv[2],
-        name=sys.argv[3])
+        database=sys.argv[3])
 
     cursor = db.cursor()
 
