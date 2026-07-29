@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 '''A scirpt that lists id, name in states table.'''
 import MySQLdb
-
 import sys
 
 
@@ -17,7 +16,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     state = sys.argv[4]
-    query = f"SELECT * FROM {state} ORDER BY states.id ASC"
+    query = f"SELECT * FROM states WHERE name = '{state}' ORDER BY id ASC"
     cursor.execute(query)
 
     rows = cursor.fetchall()
