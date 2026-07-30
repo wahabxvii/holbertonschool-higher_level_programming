@@ -17,14 +17,14 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     state = sys.argv[4]
-    query = ("""
+    query = """
     SELECT cities.name FROM cities
     LEFT JOIN states ON states.id = cities.state_id
     WHERE state.name = %s
     ORDER BY cities.id ASC
-             """, (state,))
+             """
 
-    cursor.execute(query)
+    cursor.execute(query, (state,))
 
     rows = cursor.fetchall()
 
