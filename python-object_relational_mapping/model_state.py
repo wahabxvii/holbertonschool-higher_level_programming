@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 '''python file contain class definition of state'''
-
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
