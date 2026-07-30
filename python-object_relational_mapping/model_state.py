@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 '''python file contain class definition of state'''
-
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
 
 Base = declarative_base()
+
 
 class State(Base):
     '''Class links to table states.'''
