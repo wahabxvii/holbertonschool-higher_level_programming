@@ -20,7 +20,7 @@ if __name__ == "__main__":
     query = """
     SELECT cities.name FROM cities
     LEFT JOIN states ON states.id = cities.state_id
-    WHERE state.name = %s
+    WHERE states.name = %s
     ORDER BY cities.id ASC
              """
 
