@@ -17,10 +17,10 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     state = sys.argv[4]
-    query = ("SELECT cities.name FROM cities\
-    LEFT JOIN states ON states.id = cities.state_id\
-    WHERE BINARY state.name = %s\
-    ORDER BY cities.id ASC", (state,))
+    query = ("SELECT cities.name FROM cities"
+    "LEFT JOIN states ON states.id = cities.state_id"
+    "WHERE BINARY state.name = %s"
+    "ORDER BY cities.id ASC", (state,))
     cursor.execute(query)
 
     rows = cursor.fetchall()
