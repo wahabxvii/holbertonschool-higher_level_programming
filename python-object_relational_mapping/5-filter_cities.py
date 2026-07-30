@@ -22,14 +22,13 @@ if __name__ == "__main__":
     LEFT JOIN states ON states.id = cities.state_id
     WHERE state.name = %s
     ORDER BY cities.id ASC
-             """
-             , (state,))
+             """, (state,))
+
     cursor.execute(query)
 
     rows = cursor.fetchall()
 
-    for row in rows:
-        print(row)
+    print(", ".join([row[0] for row in rows]))
 
     cursor.close()
     db.close()
