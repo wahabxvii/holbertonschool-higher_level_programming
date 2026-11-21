@@ -1,8 +1,7 @@
 #!/usr/bin/python3
+"""Print the names defined by the compiled module hidden_4."""
 if __name__ == "__main__":
     import hidden_4
-
-    pref = "__"
     for name in dir(hidden_4):
-        if pref not in name:
+        if not name.startswith("__"):
             print(name)
